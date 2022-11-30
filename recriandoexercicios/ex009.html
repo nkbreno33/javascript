@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body{
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+        } 
+
+        button {
+            padding: 30px;
+            
+        }
+
+        button:active{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Cliques</h1>
+
+    <button onclick="contar()">Clique para aumentar</button>
+    <button onclick="diminuir()">Clique para diminuir</button>
+    <button onclick="zerar()">Zerar o contador</button>
+    
+
+    <section id="result">
+        <p>O contador está com <mark>0</mark> cliques.</p>
+    </section>
+
+    <script>
+
+        let contador = 0
+        let res = document.querySelector('section#result')
+
+        function contar(){
+            contador ++
+            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>`
+        }
+
+        function diminuir(){
+            contador -- 
+            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.<p>`
+        }
+
+        function zerar(){
+            contador = 0
+            res.innerHTML = null
+        }
+    </script>
+    
+</body>
+</html>

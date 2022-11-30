@@ -4,24 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados com JS</title>
+    <title>Primeiros passos com DOM</title>
     <style>
-        button {
-            margin-left: 10px;
-            padding: 30px;
-            font-size: 1em;
+        body {
+            background-color: rgb(123, 113, 216);
+            color: white;
+            font: normal 18pt Arial;
         }
     </style>
 </head>
 <body>
-    <h1>Trabalhando com Dados v1.0</h1>
-    <button onclick="inicio()">Clique para começar</button>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">clique em mim</div>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    
 
     <script>
-        function inicio () {
-            var nome = window.prompt('Qual é seu nome ?')
-            window.alert(`Olá, ${nome}! É um prazer te conhecer!`)
-        }
+       /* var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+        corpo.style.background = ''
+        p1.style.color = 'blue'
+
+        document.write('Está escrito assim: ' + p1.innerHTML) */
+
+        /*
+        var corpo = document.body
+        var d = document.getElementById('msg')
+        d.style.background = 'Green'
+        d.innerText = 'Estou aguardando'
+        */
+
+        /*
+        var d = document.getElementsByName('msg')[0]
+        d.style.background = 'Black'
+        d.innerText = 'Olá'
+        */
+
+        var d = document.querySelector('div#msg')
+        d.style.color = 'blue'
+
+
+        
+        
     </script>
     
 </body>
