@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            padding: 5px 20px;
+            margin: 5px auto;
+            text-align: center;
+        }
+
+        .enviar {
+            margin: 10px auto;
+            cursor: pointer;
+            padding: 5px 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Calculadora de média</h1>
+
+    <label for="nome">Digite seu Nome <input type="text" id="nome" required></label>
+
+    <label for="email">Digite seu e-mail <input type="email" id="email" placeholder="fulano@dominio.com"></label>
+
+    <label for="nota1">Primeira nota <input type="text" id="nota1" checked></label>
+
+    <label for="nota2">Segunda nota <input type="text" id="nota2" checked></label>
+
+    <section class="calcular"><input type="submit" value="Enviar" class="enviar"></section>
+
+    <button onclick="aumentar()">Contar</button>
+
+    <button onclick="diminuir()">Diminuir</button>
+
+    <button onclick="zerar()">Zerar</button>
+
+    <section class="result">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+
+    <section class="cont">
+        <p>O contador aparece aqui</p>
+    </section>
+
+    <script>
+        let n1 = document.getElementById('nota1')
+        let n2 = document.getElementById('nota2')
+
+        let soma = document.getElementById('enviar')
+        res.innerHTML = 
+
+
+        let contador = 0
+        let res = document.querySelector('section.cont')
+
+        function inicio(){
+            let nome = prompt('Qual seu nome ?')
+            alert ('Seja bem vindo ' + nome)
+
+            let n1 = Number(prompt('Digite sua primeira nota:'))
+            let n2 = Number(prompt('Digite sua segunda nota:'))
+
+            let res = document.querySelector('section.result')
+
+            res.innerHTML = `<p> Aqui está sua nota <strong>${nome}</strong> !`
+
+            res.innerHTML += `<p> Sua média é <strong>${(n1+n2)/2}</strong>`
+            
+        }
+
+        function aumentar(){
+            contador ++
+            res.innerHTML = `<p> Contador ${contador}`
+        }
+
+        function diminuir(){
+            contador -- 
+            res.innerHTML = `<p> Contador ${contador}`
+        }
+
+        function zerar(){
+            contador = null
+            res.innerHTML = `<p> Zerou`
+        }
+    </script>
+    
+</body>
+</html>
