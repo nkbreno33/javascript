@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando Números</title>
-    <style>
-        body {
-            font: normal 18pt Arial;
-        }
-
-        input {
-            font: normal 18pt Arial;
-            width: 100px;
-        }
-
-        div#res {
-            margin-top: 20px;
-            
-        }
-    </style>
+    <title>Soma</title>
 </head>
 <body>
     <h1>Somando Valores</h1>
@@ -27,10 +12,10 @@
     <input type="number" name="txtn1" id="txtn1">
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
-    
-    <div id="res">
+
+    <section id="res">
         <p>Resultado</p>
-    </div>
+    </section>
 
     <script>
         function somar (){
@@ -40,10 +25,9 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `<strong>${s}</strong>`
-   
-        }
+            res.innerHTML = `Resultado é ${s}`
 
+        }
     </script>
     
 </body>
